@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<!-- About section  -->
+	<section class="about-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 p-0">
+					<div class="about-bg set-bg" data-setbg="{% static 'img/photographer.JPG' %}"></div>
+				</div>
+				<div class="col-lg-6 p-0">
+					<div class="about-text">
+						<h3>About Me</h3>
+						<h2>{{name}}</h2>
+						<p>Hello there ! Am a graduate from Utkal University, Odisha in Economics. Passionate about photography, deep observer and nature lover. As I have keen interest in photography always click and edit photographs according to my oun skills, do have proficient camera and smartphone. Editing requires on basis of natural background, light and necessary events.</p>
+						<h4>Editorials</h4>
+						<p><b>“Worth a thousand words”</b> — You’ve all heard the phrase about how important a picture can be. And that’s definitely true in an editorial context. Pictures can be invaluable in telling a story, illustrating a point, and making an emotional connection with viewer. So when photo editors are searching for the right photographer for a commission, expectations are high, which can seem daunting, especially if you’re just starting out or trying to break into a new market. I am here to help you.</p>
+						<a href="/contact" class="btn btn-secondary">contact me</a>
+						<!--button onclick="/contact" type="button" class="btn btn-secondary">Contact Me</button-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- About section end  -->
+	
+	<!-- Skills section  -->
+	<div class="skill-section set-bg" data-setbg="{% static 'img/skills-bg.jpg'%}">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="circle-progress text-white" data-cptitle="Nature" data-cpid="id-1" data-cpvalue="{{nature_ratio}}" data-cpcolor="#ffffff"></div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="circle-progress text-white" data-cptitle="Lifestyle" data-cpid="id-2" data-cpvalue="{{lifestyle_ratio}}" data-cpcolor="#ffffff"></div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="circle-progress text-white" data-cptitle="Fashion" data-cpid="id-3" data-cpvalue="{{fashion_ratio}}" data-cpcolor="#ffffff"></div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="circle-progress text-white" data-cptitle="Floral" data-cpid="id-4" data-cpvalue="{{floral_ratio}}" data-cpcolor="#ffffff"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Skills section end  -->
+
+	<!-- Instagram section -->
+	<!--div class="instagram-section">
+		<h6>Instagram Feed</h6>
+		<div id="instafeed" class="instagram-slider owl-carousel"></div>
+	</div-->
+	<!-- Instagram section end -->
+{% endblock %}

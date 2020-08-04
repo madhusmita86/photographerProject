@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="portfolio-2-section">
+            {% if search_value %}
+                {% if search_count == 1 %}
+                    <div align="center"><h4>{{search_count}} result found for <i> {{search_data}} </i>.</h4><br></div>
+                {% else %}
+                    <div align="center"><h4>{{search_count}} results found for <i> {{search_data}} </i>.</h4><br></div>
+                {% endif %}
+                    <div class="portfolio-warp">
+                        <div class="row portfolio-gallery m-0">
+                {% for i in search_value %}
+                            <div class="mix col-lg-4 col-sm-6 p-0">
+                                <div class="portfolio-box">
+				                    <div class="portfolio-item set-bg" data-setbg="{{i.img.url}}"></div>
+                                    <h6>{{i.img_category}}</h6><br>
+                                    <h7>{{i.img_desc}}</h7>
+                                </div>
+                            </div>
+                {% endfor %}
+                        </div>
+                    </div>
+            {% else %}
+                <div align="center">
+                    <h3>There is no search result for <i>{{search_data}}</i>.</h3>
+                    <br><h3>Please try another one.</h3>
+                </div>
+            {% endif %}
+    </div>
+{% endblock %}

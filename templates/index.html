@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+	<!-- Hero section  -->
+	<div class="hero-section">
+		<div class="hero-slider owl-carousel">
+<!--image slider-->
+			{% for i in images %}
+				{% if i.img_special %}
+				<div class="hero-item portfolio-item set-bg" data-setbg="{{i.img.url}}">
+					<a href="/portfolio1" class="hero-link">
+						<h2>Take a look at my Portfolio</h2>
+					</a>
+				</div>
+				{% endif %}
+			{% endfor %}
+	</div>
+	</div>
+	<!-- Hero section end  -->
+
+	<!-- Intro section   -->
+	<section class="intro-section">
+		<div class="intro-warp">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xl-6 col-lg-7 p-0">
+						<div class="intro-text">
+							<h2>My name is {{name}}.</h2><br>
+							<h2> I’m a photographer.</h2>
+							<p>Am an artist with the camera, using a blend of technical skills and an artistic eye to take pictures of people, places, landscapes, food, you name it. I capture images of people, places, events and objects. Am often responsible for editing photos to fit the needs of the client.</p>
+							<a href="/portfolio2" class="sp-link">Take a look @my portfolio</a>
+						</div>
+					</div>
+					<div  class="col-xl-6 col-lg-5 p-0">
+						<div class="skill-warp">
+							<div   class="single-progress-item">
+								<div align="center" class="progress-bar-style" data-progress="{{nature_ratio}}"></div>
+								<p>Nature</p>
+							</div>
+							<div class="single-progress-item">
+								<div class="progress-bar-style" data-progress="{{lifestyle_ratio}}"></div>
+								<p>Lifestyle</p>
+							</div>
+							<div class="single-progress-item">
+								<div class="progress-bar-style" data-progress="{{fashion_ratio}}"></div>
+								<p>Fashion</p>
+							</div>
+							<div class="single-progress-item">
+								<div class="progress-bar-style" data-progress="{{floral_ratio}}"></div>
+								<p>Floral</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end  -->
+
+{% endblock %}
